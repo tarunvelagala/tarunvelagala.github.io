@@ -28,6 +28,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
@@ -36,21 +37,22 @@ jobs:
         with:
           base-url-path: https://www.tarunvelagala.github.io/
 
-      - name: Commit and push
+      - name: Commit and push sitemap
         run: |
-          if [[ `git status --porcelain sitemap.xml` ]]; then
+          if [[ $(git status --porcelain sitemap.xml) ]]; then
             git config --global user.name 'github-actions'
             git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
             git add sitemap.xml
-            git commit -m "Automated sitemap update" sitemap.xml
+            git commit -m "Automated sitemap update"
             git push
           fi
-          
+
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
