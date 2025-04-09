@@ -1,6 +1,6 @@
 {
-  "name": "Tarun Velagala | Code. Optimize. Deliver.",
-  "short_name": "TK",
+  "name": "VTKR",
+  "short_name": "VTKR",
   "icons": [
     {
       "src": "assets/img/favicon/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#4169E1",
+  "background_color": "#4169E1",
   "display": "standalone"
 }
