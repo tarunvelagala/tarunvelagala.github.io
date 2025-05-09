@@ -9,19 +9,31 @@ interface SkillCategory {
 const skillsData: SkillCategory[] = [
   {
     category: "Programming Languages",
-    skills: ["JavaScript", "TypeScript", "Python", "Java", "C++"]
+    skills: ["JavaScript", "TypeScript", "Python", "Java", "SQL"]
   },
   {
     category: "Frontend Technologies",
-    skills: ["React", "Angular", "Vue.js", "HTML5", "CSS3", "Tailwind CSS"]
+    skills: ["React", "HTML5", "CSS3", "Tailwind CSS"]
   },
   {
     category: "Backend Technologies",
-    skills: ["Node.js", "Express", "Django", "Spring Boot", "GraphQL"]
+    skills: ["Flask", "Spring Boot", "Flutter"]
   },
   {
     category: "Tools & Platforms",
-    skills: ["Git", "Docker", "Kubernetes", "AWS", "GitHub Actions", "Jenkins"]
+    skills: ["Git", "Docker", "GitHub Actions", "VSCode", "Intellij"]
+  },
+  {
+    category: "Testing Tools",
+    skills: ["JUnit", "TestNG", "Mockito"]
+  },
+  {
+    category: "Others",
+    skills: ["Microservices", "RESTful API", "Agile", "IaC", "CI/CD", "OOP", "Gradle", "ETL"]
+  },
+  {
+    category: "Amazon Web Services (AWS)",
+    skills: [ "DynamoDB", "Redshift", "Lambda", "EC2", "S3", "Glue", "CloudFormation", "Cloudwatch", "IAM"]
   }
 ];
 
