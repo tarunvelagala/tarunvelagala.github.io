@@ -58,7 +58,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-10">
           {/* Logo */}
           <a href="#" className="flex items-center">
-            <span className="text-2xl font-wakanda font-bold text-palette-green">TV</span>
+            <span className="text-4xl font-wakanda font-bold text-palette-green">TV</span>
           </a>
 
           {/* Mobile menu button */}
