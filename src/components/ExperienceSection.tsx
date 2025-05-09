@@ -10,33 +10,36 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    title: "Software Engineer",
-    company: "Tech Company Inc.",
-    period: "2020 - Present",
+    title: "Software Application Engineer 2",
+    company: "Amazon",
+    period: "Oct 2023 - Present",
     description: [
-      "Led development of key features for company's flagship product",
-      "Collaborated with cross-functional teams to deliver high-quality software solutions",
-      "Implemented CI/CD pipeline that reduced deployment time by 30%"
+      "Built disaster recovery for a data transformation engine, reducing ops overhead by 20% and simplifying ETL onboarding.",
+      "Led Redshift subnet migration (2.6 PB) using AWS/Python with 100% availability across 4 services.",
+      "Streamlined onboarding for a data-sharing platform, purging 50 TB and integrating 5 key services.",
+      "Migrated a balance tracking service to Java microservices on ECS/RDS, enabling 3 RPS corrections and TestNG-based integration tests."
     ]
   },
   {
-    title: "Junior Developer",
-    company: "Digital Solutions LLC",
-    period: "2018 - 2020",
+    title: "Software Application Engineer 2",
+    company: "Amazon",
+    period: "Apr 2022 - Sep 2023",
     description: [
-      "Developed and maintained client-facing web applications",
-      "Participated in Agile development processes",
-      "Contributed to internal tools that improved team productivity"
+      "Architected and deployed high-availability RESTful APIs for a Seller Payments Tracking Service (100K daily visits, 15 RPS), improving query performance by 30%.",
+      "Mentored interns and improved seller satisfaction through optimized tracking systems.",
+      "Led dataset migration to an upgraded data warehouse, boosting analytics capabilities by 25%.",
+      "Built monitoring and integration testing with TypeScript, CloudWatch, and TestNG, streamlining debugging and CI/CD deployment.",
+      "Detected and resolved $5M in seller balance discrepancies via automated ticketing and reporting with Athena and S3."
     ]
   },
   {
-    title: "Intern",
-    company: "Web Innovations",
-    period: "Summer 2017",
+    title: "Support Engineer 2",
+    company: "Amazon",
+    period: "Aug 2020 - Mar 2022",
     description: [
-      "Assisted senior developers in building responsive websites",
-      "Learned modern web development frameworks and practices",
-      "Participated in code reviews and team meetings"
+      "Developed Java-based REST APIs for a vendor portal using ORM, AWS API Gateway, and Lambda, improving response times by 15%.",
+      "Integrated a traffic-shaping tool to filter bad traffic, reducing server costs by 20%.",
+      "Optimized Java services using AWS profiling tools, boosting system performance by 10%."
     ]
   }
 ];
@@ -46,7 +49,7 @@ export default function ExperienceSection() {
     <section id="experience" className="bg-muted/30">
       <div className="section-container">
         <h2 className="section-title">Work Experience</h2>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6">
           {experiences.map((exp, index) => (
             <Card key={index} className="border-l-4 border-l-primary">
               <CardHeader>
