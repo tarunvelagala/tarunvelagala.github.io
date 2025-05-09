@@ -4,27 +4,27 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 interface Education {
   degree: string;
   institution: string;
+  location: string,
+  percentage: string,
   period: string;
   description: string;
 }
 
 const educationData: Education[] = [
   {
-    degree: "Master of Computer Science",
-    institution: "University of Technology",
-    period: "2016 - 2018",
-    description: "Focused on artificial intelligence and machine learning, graduated with honors."
+    degree: "Bachelor of Technology - Computer Science",
+    institution: "Sathyabama Institute of Science and Technology",
+    location: "Chennai, India",
+    percentage: "85.9",
+    period: "2016 - 2020",
+    description: "Focused on Mobile, Web app development using Flutter, Python, OOP, Data Structures, Algorithms"
   },
   {
-    degree: "Bachelor of Engineering",
-    institution: "National Engineering College",
-    period: "2012 - 2016",
-    description: "Majored in Computer Science with a minor in Mathematics."
-  },
-  {
-    degree: "High School Diploma",
-    institution: "City High School",
-    period: "2010 - 2012",
+    degree: "Higher Secondary",
+    institution: "Narayana Junior College",
+    location: "Vijayawada, India",
+    percentage: "97.6",
+    period: "2014 - 2016",
     description: "Science and Mathematics track, graduated top of class."
   }
 ];
@@ -39,7 +39,7 @@ export default function EducationSection() {
             <Card key={index}>
               <CardHeader>
                 <CardTitle>{edu.degree}</CardTitle>
-                <CardDescription>{edu.institution} | {edu.period}</CardDescription>
+                <CardDescription>{edu.institution} | {edu.location} | {edu.period} | <text>Percentage: <b>{edu.percentage}</b></text></CardDescription>
               </CardHeader>
               <CardContent>
                 <p>{edu.description}</p>
