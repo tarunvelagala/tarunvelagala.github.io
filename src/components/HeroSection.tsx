@@ -21,9 +21,6 @@ export default function HeroSection() {
           <p className="text-xl md:text-2xl mb-8 text-muted-foreground">
             Application Engineer 2 @ Amazon | Java Backend | ETL | AWS 
           </p>
-          <p className="text-l md:text-xl mb-8 text-muted-foreground">
-            Passionate Programmer | Interactive Team Player 
-          </p>
           {/* Button + Icons Group */}
           <div className="flex items-center gap-4">
             <Button
