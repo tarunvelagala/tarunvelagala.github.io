@@ -50,7 +50,7 @@ export default function Navbar() {
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-md shadow-sm py-3"
+          ? "bg-muted/30 backdrop-blur-md shadow-sm py-3"
           : "bg-transparent py-5"
       }`}
     >

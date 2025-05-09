@@ -11,7 +11,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center pt-16 bg-gradient-to-b from-background to-secondary/10">
+    <section id="hero" className="min-h-screen flex items-center pt-16 bg-muted/30">
       <div className="section-container">
         <div className="max-w-3xl">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">

@@ -27,7 +27,7 @@ const skillsData: SkillCategory[] = [
 
 export default function SkillsSection() {
   return (
-    <section id="skills">
+    <section id="skills" className="bg-muted/30">
       <div className="section-container">
         <h2 className="section-title">Skills</h2>
         <div className="grid gap-10 md:grid-cols-2">

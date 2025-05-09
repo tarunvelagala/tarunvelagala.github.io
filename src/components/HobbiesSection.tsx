@@ -35,7 +35,7 @@ const hobbies: Hobby[] = [
 
 export default function HobbiesSection() {
   return (
-    <section id="hobbies">
+    <section id="hobbies" className="bg-muted/30">
       <div className="section-container">
         <h2 className="section-title">Hobbies</h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
