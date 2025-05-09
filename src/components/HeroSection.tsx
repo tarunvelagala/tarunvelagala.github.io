@@ -16,7 +16,7 @@ export default function HeroSection() {
         <div className="max-w-3xl">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
             Hello, I'm{" "}
-            <span className="text-palette-blue">Tarun Velagala</span>
+            <span className="text-palette-green">Tarun Velagala</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-muted-foreground">
             Welcome to my portfolio website

@@ -70,11 +70,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				palette: {
-					darkGray: '#1C2127', /* Darkest gray */
-					darkBlue: '#2E3440', /* Dark blue-gray */
-					white: '#FFFFFF',    /* White */
-					green: '#33C25E',    /* Bright green */
-					blue: '#0D73F8'      /* Bright blue */
+					darkGray: '#24292e', /* Dark gray/black */
+					darkBlue: '#2b3137', /* Dark blue-gray */
+					white: '#ffffff',    /* White */
+					lightGray: '#fafbfc', /* Light gray */
+					green: '#2dba4e'      /* Bright green */
 				}
 			},
 			fontFamily: {

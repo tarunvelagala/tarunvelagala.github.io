@@ -11,9 +11,9 @@ export default function Footer() {
           </div>
           <div className="mt-4 md:mt-0">
             <nav className="flex space-x-4">
-              <a href="#" className="text-sm text-muted-foreground hover:text-palette-blue transition-colors">LinkedIn</a>
-              <a href="#" className="text-sm text-muted-foreground hover:text-palette-blue transition-colors">GitHub</a>
-              <a href="#" className="text-sm text-muted-foreground hover:text-palette-blue transition-colors">Twitter</a>
+              <a href="#" className="text-sm text-muted-foreground hover:text-palette-green transition-colors">LinkedIn</a>
+              <a href="#" className="text-sm text-muted-foreground hover:text-palette-green transition-colors">GitHub</a>
+              <a href="#" className="text-sm text-muted-foreground hover:text-palette-green transition-colors">Twitter</a>
               <a href="#" className="text-sm text-muted-foreground hover:text-palette-green transition-colors">Contact</a>
             </nav>
           </div>
