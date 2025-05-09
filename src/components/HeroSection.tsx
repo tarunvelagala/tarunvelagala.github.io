@@ -25,7 +25,7 @@ export default function HeroSection() {
             Passionate Programmer | Interactive Team Player 
           </p>
           {/* Button + Icons Group */}
-          <div className="flex items-center gap-4 flex-row flex-col sm:flex-row">
+          <div className="flex items-center gap-4">
             <Button
               onClick={handleDownloadResume}
               className="flex items-center gap-2 bg-palette-green hover:bg-palette-green/90 transition-colors"
