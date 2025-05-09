@@ -68,6 +68,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				palette: {
+					teal: '#1fb7c2',
+					greenTeal: '#45c9a5',
+					salmon: '#ff5757',
+					lightBg: '#edf2f7',
+					darkBg: '#0e1c2f'
 				}
 			},
 			fontFamily: {

@@ -11,7 +11,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center pt-16">
+    <section id="hero" className="min-h-screen flex items-center pt-16 bg-gradient-to-b from-background to-secondary/30">
       <div className="section-container">
         <div className="max-w-3xl">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
@@ -21,7 +21,7 @@ export default function HeroSection() {
           <p className="text-xl md:text-2xl mb-8 text-muted-foreground">
             Welcome to my portfolio website
           </p>
-          <Button onClick={handleDownloadResume} className="flex items-center gap-2">
+          <Button onClick={handleDownloadResume} className="flex items-center gap-2 bg-primary hover:bg-accent transition-colors">
             <Download className="h-4 w-4" />
             Download Resume
           </Button>
