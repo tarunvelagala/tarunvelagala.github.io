@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
+import { Code, Download, Github, Linkedin, Twitter } from "lucide-react";
 
 export default function HeroSection() {
   const handleDownloadResume = () => {
@@ -21,10 +21,55 @@ export default function HeroSection() {
           <p className="text-xl md:text-2xl mb-8 text-muted-foreground">
             Welcome to my portfolio website
           </p>
-          <Button onClick={handleDownloadResume} className="flex items-center gap-2 bg-palette-green hover:bg-palette-green/90 transition-colors">
-            <Download className="h-4 w-4" />
-            Download Resume
-          </Button>
+          {/* Button + Icons Group */}
+          <div className="flex items-center gap-4">
+            <Button
+              onClick={handleDownloadResume}
+              className="flex items-center gap-2 bg-palette-green hover:bg-palette-green/90 transition-colors"
+            >
+            <Download className="h-8 w-8" />
+              Download Resume
+            </Button>
+            {/* Social Icons */}
+            <div className="flex items-center gap-3">
+              <a
+                href="https://github.com/tarunvelagala"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="text-foreground hover:text-palette-green transition-colors"
+              >
+                <Github className="h-8 w-8" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/tarunvelagala"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-foreground hover:text-palette-green transition-colors"
+              >
+                <Linkedin className="h-8 w-8" />
+              </a>
+              <a
+                href="https://twitter.com/tarun__675/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+                className="text-foreground hover:text-palette-green transition-colors"
+              >
+                <Twitter className="h-8 w-8" />
+              </a>
+              <a
+                href="https://leetcode.com/u/tarunvelagala80/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Leetcode"
+                className="text-foreground hover:text-palette-green transition-colors"
+              >
+                <Code className="h-8 w-8" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
