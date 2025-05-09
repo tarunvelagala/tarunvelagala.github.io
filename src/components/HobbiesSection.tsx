@@ -12,24 +12,12 @@ const hobbies: Hobby[] = [
     description: "Capturing moments and exploring composition through digital and film photography."
   },
   {
-    name: "Hiking",
-    description: "Exploring nature and challenging myself with different trails and terrains."
+    name: "Music",
+    description: "Listening to soothing music according to the vibe."
   },
   {
-    name: "Reading",
-    description: "Enjoying science fiction, technical books, and philosophical literature."
-  },
-  {
-    name: "Cooking",
-    description: "Experimenting with diverse cuisines and mastering new techniques."
-  },
-  {
-    name: "Chess",
-    description: "Strategic thinking and participating in local tournaments."
-  },
-  {
-    name: "Playing Guitar",
-    description: "Learning new songs and occasionally performing at small gatherings."
+    name: "Tech Enthusiast",
+    description: "Obsessed with trying out newer technologies and hacks."
   }
 ];
 
