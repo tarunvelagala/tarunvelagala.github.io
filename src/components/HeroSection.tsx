@@ -1,6 +1,7 @@
-
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Code, Download, Github, Linkedin, Twitter } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
   const handleDownloadResume = () => {
@@ -9,6 +10,18 @@ export default function HeroSection() {
     console.log("Resume download triggered");
     alert("Resume download functionality will be connected to an actual PDF file");
   };
+  const text = "Tarun Velagala";
+  const [revealed, setRevealed] = useState(0);
+
+  const chars = text.split("");
+  const realChars = chars.filter((c) => c !== " ");
+
+  useEffect(() => {
+    if (revealed < realChars.length) {
+      const timeout = setTimeout(() => setRevealed(revealed + 1), 300);
+      return () => clearTimeout(timeout);
+    }
+  }, [revealed, realChars.length]);
 
   return (
     <section id="hero" className="min-h-screen flex items-center pt-16 bg-muted/30">
@@ -16,7 +29,24 @@ export default function HeroSection() {
         <div className="max-w-3xl">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
             Hello, I'm{" "}
-            <span className="text-palette-green">Tarun Velagala</span>
+            {chars.map((char, i) => {
+              if (char === " ") return <span key={i}>&nbsp;</span>;
+
+              const index = chars.slice(0, i + 1).filter((c) => c !== " ").length - 1;
+              const show = index < revealed;
+
+              return (
+                <motion.span
+                  key={i}
+                  initial={{ y: 10 }}
+                  animate={{ y: 0 }}
+                  transition={{ delay: index * 0.05, duration: 0.3 }}
+                  className={`${show ? "font-sans text-palette-green" : "font-wakanda text-palette-green"} transition-all duration-300`}
+                >
+                  {char}
+                </motion.span>
+              );
+            })}
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-muted-foreground">
             Application Engineer 2 @ Amazon | Java Backend | ETL | AWS 
