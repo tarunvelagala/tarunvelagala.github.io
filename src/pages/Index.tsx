@@ -5,6 +5,7 @@ import ExperienceSection from "@/components/ExperienceSection";
 import SkillsSection from "@/components/SkillsSection";
 import EducationSection from "@/components/EducationSection";
 import HobbiesSection from "@/components/HobbiesSection";
+import FloatingScrollIcon from "@/components/FloatingScrollIcon";
 
 const Index = () => {
   return (
@@ -17,6 +18,7 @@ const Index = () => {
         <EducationSection />
         <HobbiesSection />
       </main>
+      <FloatingScrollIcon />
       {/* <Footer /> */}
     </div>
   );
