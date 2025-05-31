@@ -1,7 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { ChevronDown } from "lucide-react";
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const sections = ['hero', 'experience', 'skills', 'education', 'hobbies'];
@@ -61,7 +60,7 @@ export default function FloatingScrollIcon() {
       {isLastSection ? (
         <ArrowUp className="h-6 w-6 text-white animate-bounce" />
       ) : (
-        <ChevronDown className="h-6 w-6 text-white animate-bounce" />
+        <ArrowDown className="h-6 w-6 text-white animate-bounce" />
       )}
     </Button>
   );
