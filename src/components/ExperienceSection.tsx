@@ -51,7 +51,7 @@ export default function ExperienceSection() {
         <h2 className="section-title">Work Experience</h2>
         <div className="grid gap-6">
           {experiences.map((exp, index) => (
-            <Card key={index} className="border-l-4 border-l-primary">
+            <Card key={index} className="border-l-4 border-l-primary hover:shadow-md transition-shadow">
               <CardHeader>
                 <CardTitle>{exp.title}</CardTitle>
                 <CardDescription>{exp.company} | {exp.period}</CardDescription>

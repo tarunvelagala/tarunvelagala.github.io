@@ -36,7 +36,7 @@ export default function EducationSection() {
         <h2 className="section-title">Education</h2>
         <div className="space-y-6">
           {educationData.map((edu, index) => (
-            <Card key={index}>
+            <Card key={index} className="hover:shadow-md transition-shadow">
               <CardHeader>
                 <CardTitle>{edu.degree}</CardTitle>
                 <CardDescription>{edu.institution} | {edu.location} | {edu.period} | <text>Percentage: <b>{edu.percentage}</b></text></CardDescription>
