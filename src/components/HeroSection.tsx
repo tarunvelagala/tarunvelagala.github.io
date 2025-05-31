@@ -1,14 +1,11 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Code, Download, Github, Linkedin, Twitter } from "lucide-react";
+import { Code, Eye, Github, Linkedin, Twitter } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function HeroSection() {
   const handleDownloadResume = () => {
-    // In a real implementation, this would point to an actual PDF file
-    // For now, we'll just log a message
-    console.log("Resume download triggered");
-    alert("Resume download functionality will be connected to an actual PDF file");
+    window.open('/Tarun_Kumar_Reddy_Velagala_-_Software_Application_Engineer.pdf', '_blank');
   };
   const text = "Tarun Velagala";
   const [revealed, setRevealed] = useState(0);
@@ -57,8 +54,8 @@ export default function HeroSection() {
               onClick={handleDownloadResume}
               className="flex items-center gap-2 bg-palette-green hover:bg-palette-green/90 transition-colors"
             >
-            <Download className="h-8 w-8" />
-              Download Resume
+            <Eye className="h-8 w-8" />
+              Preview Resume
             </Button>
             {/* Social Icons */}
             <div className="flex items-center gap-3">
