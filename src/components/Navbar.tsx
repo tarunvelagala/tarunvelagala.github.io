@@ -1,7 +1,17 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun, Menu } from "lucide-react";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface NavItem {
   name: string;
@@ -18,6 +28,8 @@ const navItems: NavItem[] = [
 export default function Navbar() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
@@ -46,6 +58,17 @@ export default function Navbar() {
     localStorage.setItem("theme", newTheme);
   };
 
+  const handleMobileNavClick = (href: string) => {
+    setMobileMenuOpen(false);
+    // Small delay to allow drawer to close before scrolling
+    setTimeout(() => {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 300);
+  };
+
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
@@ -62,12 +85,11 @@ export default function Navbar() {
           </a>
 
           {/* Mobile menu button */}
-          <div className="flex md:hidden">
+          <div className="flex md:hidden items-center gap-2">
             <Button
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
-              className="mr-2"
             >
               {theme === "light" ? (
                 <Moon className="h-5 w-5" />
@@ -75,9 +97,35 @@ export default function Navbar() {
                 <Sun className="h-5 w-5" />
               )}
             </Button>
+            <Drawer open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+              <DrawerTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </DrawerTrigger>
+              <DrawerContent>
+                <DrawerHeader>
+                  <DrawerTitle>Navigation</DrawerTitle>
+                  <DrawerDescription>
+                    Navigate to different sections of the portfolio
+                  </DrawerDescription>
+                </DrawerHeader>
+                <div className="p-4 space-y-4">
+                  {navItems.map((item) => (
+                    <button
+                      key={item.name}
+                      onClick={() => handleMobileNavClick(item.href)}
+                      className="block w-full text-left text-lg font-medium text-foreground hover:text-palette-green transition-colors py-2"
+                    >
+                      {item.name}
+                    </button>
+                  ))}
+                </div>
+              </DrawerContent>
+            </Drawer>
           </div>
 
-          {/* Navigation */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-8">
             {navItems.map((item) => (
               <a
