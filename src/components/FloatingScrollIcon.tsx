@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const sections = ['hero', 'experience', 'skills', 'education', 'hobbies'];
@@ -9,12 +9,21 @@ export default function FloatingScrollIcon() {
   const [currentSection, setCurrentSection] = useState(0);
 
   const scrollToSection = () => {
-    const nextSection = (currentSection + 1) % sections.length;
-    const element = document.getElementById(sections[nextSection]);
+    const isLastSection = currentSection === sections.length - 1;
     
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setCurrentSection(nextSection);
+    if (isLastSection) {
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setCurrentSection(0);
+    } else {
+      // Scroll to next section
+      const nextSection = (currentSection + 1) % sections.length;
+      const element = document.getElementById(sections[nextSection]);
+      
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        setCurrentSection(nextSection);
+      }
     }
   };
 
@@ -40,13 +49,19 @@ export default function FloatingScrollIcon() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const isLastSection = currentSection === sections.length - 1;
+
   return (
     <Button
       onClick={scrollToSection}
       className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-primary hover:bg-primary/90 shadow-lg transition-all duration-300 hover:scale-110"
       size="icon"
     >
-      <ChevronDown className="h-6 w-6 text-white animate-bounce" />
+      {isLastSection ? (
+        <ArrowUp className="h-6 w-6 text-white animate-bounce" />
+      ) : (
+        <ChevronDown className="h-6 w-6 text-white animate-bounce" />
+      )}
     </Button>
   );
 }
