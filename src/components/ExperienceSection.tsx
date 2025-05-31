@@ -33,7 +33,7 @@ const experiences: Experience[] = [
     ]
   },
   {
-    title: "Support Engineer 2",
+    title: "Support Engineer II",
     company: "Amazon",
     period: "Aug 2020 - Mar 2022",
     description: [
