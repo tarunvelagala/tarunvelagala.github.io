@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react";
-import { ChevronDown, ArrowUp } from "lucide-react";
+import { ChevronDown } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const sections = ['hero', 'experience', 'skills', 'education', 'hobbies'];
