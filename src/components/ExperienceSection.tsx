@@ -10,7 +10,7 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    title: "Software Application Engineer 2",
+    title: "Software Application Engineer IV",
     company: "Amazon",
     period: "Oct 2023 - Present",
     description: [
@@ -21,7 +21,7 @@ const experiences: Experience[] = [
     ]
   },
   {
-    title: "Software Application Engineer 2",
+    title: "Software Application Engineer III",
     company: "Amazon",
     period: "Apr 2022 - Sep 2023",
     description: [
