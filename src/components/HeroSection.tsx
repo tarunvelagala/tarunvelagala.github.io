@@ -46,7 +46,7 @@ export default function HeroSection() {
             })}
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-muted-foreground">
-            Application Engineer 2 @ Amazon | Java Backend | ETL | AWS 
+            Consultant @ Capgemini | Java Backend | ETL | AWS 
           </p>
           {/* Button + Icons Group */}
           <div className="flex items-center gap-4">
