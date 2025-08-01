@@ -10,9 +10,15 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
+    title: "Consultant",
+    company: "Capgemini",
+    period: "Jun 2025 - Present",
+    description: []
+  },
+  {
     title: "Software Application Engineer II",
     company: "Amazon",
-    period: "Oct 2023 - Present",
+    period: "Oct 2023 - Feb 2025",
     description: [
       "Built disaster recovery for a data transformation engine, reducing ops overhead by 20% and simplifying ETL onboarding.",
       "Led Redshift subnet migration (2.6 PB) using AWS/Python with 100% availability across 4 services.",
