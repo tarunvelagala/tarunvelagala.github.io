@@ -13,7 +13,10 @@ const experiences: Experience[] = [
     title: "Consultant",
     company: "Capgemini",
     period: "Jun 2025 - Present",
-    description: []
+    description: [
+      "Optimized system reliability by migrating test suites to JUnit5 and automating CI/CD compliance via GitHub Actions, aligning with 2025 global tool simplification strategies.",
+      "Built REST-to-OData integration API's serving approximately 1M users enabling current-generation access to next-generation network catalogs with mapped search and query filters."
+    ]
   },
   {
     title: "Software Application Engineer II",
